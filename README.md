@@ -7,3 +7,5 @@ The backend and frontend is developed using spring tool suite 4.4.9.0 embedded i
 2. The frontend runs on port 8080
 3. Import the applications into spring tool suite and click on run
 4. Ensure the backend is setup up and running before running the frontend to ensure seamless interaction with the predefined data.
+
+![alt text](https://github.com/SamjuTheCoder/iSellMarketplace/blob/master/iSell_Markeplace_ER_Dagram.png)
