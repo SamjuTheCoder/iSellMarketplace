@@ -1,0 +1,398 @@
+a:hover{
+  color: #AB47BC;
+}
+.section-title:before{
+  background-color: #AB47BC;
+}
+.section-title:after{
+  background-color: #AB47BC;
+}
+.section-sub:before{
+  background-color: #AB47BC;
+}
+.slicknav_btn{
+  background: #AB47BC;
+}
+.slicknav_nav a:hover, .slicknav_nav .active{
+  color: #AB47BC;
+}
+.slicknav_nav .dropdown li a.active{
+  color: #AB47BC;
+}
+.btn-common{
+    background-color: #AB47BC;
+}
+.btn-common:hover{
+  color: #fff;
+  background-color: #BA68C8;
+}
+.form-control:focus{
+  border-color: #AB47BC;
+}
+.navbar li.active a.nav-link{
+  color: #AB47BC;
+}
+.top-nav-collapse .navbar-nav .nav-link:hover{
+  color: #AB47BC!important;
+}
+.top-nav-collapse .navbar-nav li.active a.nav-link{
+  color: #E91E63!important;
+}
+.header-top-right .header-top-button:hover{
+  color: #AB47BC;
+}
+.navbar-expand-lg .navbar-nav li a:hover, .navbar-expand-lg .navbar-nav li .active>a, .navbar-expand-lg .navbar-nav li a:focus{
+  color: #AB47BC;
+}
+.dropdown .dropdown-item:focus, .dropdown .dropdown-item:hover, .dropdown .dropdown-item.active{
+  background: #AB47BC;
+}
+.user-sign a:hover{
+  color: #AB47BC;
+}
+.sign-in li .nav-link:hover{
+  color: #AB47BC!important;
+}
+.user-sign .tg-btn{
+  background: #AB47BC;
+}
+.tg-btn:hover{
+  background: #AB47BC;
+}
+#hero-area .contents span.year{
+  color: #AB47BC;
+}
+#main-slide .carousel-control i:hover{
+    background: #AB47BC;
+    border-color: #AB47BC;
+}
+.search-bar .inputwithicon i{
+  color: #AB47BC;
+}
+.box:hover{
+  background: #AB47BC;
+}
+.featured-box figure .icon span i{
+  background: #AB47BC;
+}
+.featured-box figure .price-save{
+  background: #AB47BC;
+}
+.featured-box .feature-content h4 a{
+  color: #AB47BC;
+}
+.featured-box .feature-content h4 a:hover{
+  color: #AB47BC;
+}
+.featured-box .feature-content .meta-tag span a:hover{
+  color: #AB47BC; 
+}
+.featured-box .feature-content .listing-bottom .price{
+  color: #AB47BC;
+}
+.bg-sale a{
+  background: #AB47BC;
+}
+.categories-icon .icon-box:hover{
+  background: #AB47BC;
+}
+.product-item .product-title a:hover{
+  color: #AB47BC;
+}
+.product-item .icon i{
+  color: #AB47BC;
+}
+.product-item .icon i:hover{
+  border-color: #AB47BC;
+  background: #AB47BC;
+}
+.product-item .card-text .icon-wrap i{
+  color: #AB47BC;
+}
+.product-item .product-content a:hover{
+  color: #AB47BC;
+}
+.product-item .card-text .address:hover{
+  color: #AB47BC;
+}
+.services-item .icon i{
+  color: #AB47BC;
+}
+.services-item:hover .icon i{
+  background: #AB47BC;
+}
+.services-item .services-content h3 a{
+  color: #AB47BC;
+}
+.services-item:hover{
+  border-color: #AB47BC;
+}
+.counter-section .counter .icon i{
+  color: #AB47BC;
+}
+.special-product .product-text .price{
+  color: #AB47BC;
+}
+.testimonial .img-thumb img{
+  border-color: #AB47BC;
+}
+.testimonial-item .content .info-text h2 a:hover{
+  color: #AB47BC;
+}
+.block-title:before{
+  background: #AB47BC;
+}
+.footer-social li a{
+  background: #AB47BC;
+}
+footer .menu li a:hover{
+  color: #AB47BC;
+}
+a.back-to-top i{
+  background: #AB47BC;
+}
+#pricing-table .table .pricing-header .price-value{
+  color: #AB47BC;
+}
+#pricing-table #active-tb{
+  border-color: #AB47BC;
+}
+#pricing-table .table:hover{
+  border-color: #AB47BC;
+}
+.single-cta .cta-icon i{
+  color: #AB47BC;
+}
+.product-filter .nav-tabs .nav-item.show .nav-link, .product-filter .nav-tabs .nav-link.active{
+  color: #AB47BC;
+}
+.page-sidebar .categories-list li a:hover{
+  color: #AB47BC;
+}
+.page-link:focus, .page-link:hover, .page-link.active{
+  background: #AB47BC;
+  color: #fff!important;
+}
+.page-item .page-link{
+  color: #AB47BC;
+}
+.page-header .breadcrumb-wrapper .breadcrumb{
+  color: #AB47BC;
+}
+.details-box .price{
+  background: #AB47BC;
+}
+.details-box .ads-details-info .details-meta span a:hover{
+  color: #AB47BC;
+}
+.details-box .ads-details-info .list-specification li i{
+  color: #AB47BC;
+}
+.details-sidebar .posts-list .widget-content a:hover{
+  color: #AB47BC;
+}
+.details-sidebar .posts-list .meta-tag span a:hover{
+  color: #AB47BC;
+}
+.details-sidebar .posts-list .price{
+  color: #AB47BC;
+}
+.description-info .short-info ul li a:hover{
+  color: #AB47BC;
+}
+.description-info .short-info ul li a span{
+  color: #AB47BC;
+}
+.ads-details-wrapper .price{
+  background: #AB47BC;
+}
+.panel-default .panel-heading{
+  background: #AB47BC;
+}
+.error-content .error-message h2{
+  color: #AB47BC;
+}
+.error-content .description a:hover{
+  color: #AB47BC;
+}
+#blog .blog-item-text h3 a:hover{
+  color: color: #AB47BC;
+}
+.blog-post .post-content .post-title a:hover{
+  color: #AB47BC;
+}
+#blog .blog-item-text .btn-rm:hover{
+  color: #AB47BC;
+}
+.blog-post{
+  border-color: #AB47BC;
+}
+.blog-post .meta .meta-part a:hover{
+  color: #AB47BC;
+}
+#sidebar .categories-list li a:hover{
+  color: #AB47BC;
+}
+#sidebar .posts-list .widget-content a:hover{
+  color: #AB47BC;
+}
+#sidebar .tagcloud a:hover{
+  color: #AB47BC;
+}
+.share-items .list-inline li a i{
+  color: #AB47BC;
+}
+.reply-link{
+  color: #AB47BC;
+}
+#content .contact-title:before{
+  background: #AB47BC;
+}
+#content .contact-datails .icon i{
+  color: #AB47BC;
+}
+#content .contact-form .contact-title:before{
+  background: #AB47BC;
+}
+#content .information .contact-datails .info li p a:hover{
+  color: #AB47BC;
+}
+.contact-footer li span a:hover{
+  color: #AB47BC;
+}
+.sidebar-box .navdashboard ul li a:focus, 
+.sidebar-box .navdashboard ul li a:hover, 
+.sidebar-box .navdashboard ul li a.active{
+  background: #AB47BC;
+}
+.nav-table ul li a:hover, .nav-table ul li.active a{
+  background: #AB47BC;
+  border-color: #AB47BC;
+}
+.nav-table ul li a{
+  color: #AB47BC;
+}
+.adstatusactive{
+  background: #AB47BC;
+}
+.dashboardtable tbody tr:hover .btn-view{
+  background: #AB47BC;
+}
+.dashboard-sections .icon i{
+  background: #AB47BC;
+}
+.offers-user-online .offerer .bolticon{
+  background: #AB47BC;
+}
+.offers-user-online .offerer .user-name h4 a{
+  color: #AB47BC;
+}
+#color-style-switcher .bottom a.settings{
+  color: #AB47BC;
+}
+.product-item .price{
+  color: #AB47BC;
+}
+.product-item .icon-wrap{
+  color: #AB47BC;
+}
+.call-back .call-us{
+  border-color: #AB47BC;
+}
+.call-back .call-us .icon i{
+  color: #AB47BC;
+}
+.call-back .call-us .contact-text h5{
+  color: #AB47BC;
+}
+#pricing-table .table .icon i{
+  color: #AB47BC;
+}
+.media-content-list .media-body h4 a:hover{
+  color: #AB47BC;
+}
+.owl-nav div{
+  background: #AB47BC!important;
+}
+.owl-theme .owl-controls .active .item-link{
+  border-color: #AB47BC;
+}
+.classiser-search-bar .inputwithicon i{
+  color: #AB47BC;
+}
+.services-tow-area .service-two-item-wrapper .icon i{
+  color: #AB47BC;
+}
+.services-tow-area .service-two-item-wrapper .services-item-two .services-content h3 a:hover{
+  color: #AB47BC;
+}
+.services-tow-area .service-two-item-wrapper .services-item-two .services-content .service-two-btn{
+  color: #AB47BC;
+}
+.img-box:hover:before{
+  background: #AB47BC;
+}
+.ad-categories-inner .icon{
+  background: #AB47BC;
+}
+.blog-post-item .post-thumb .post-categories a{
+  background: #AB47BC;
+}
+.widget.categories .categories-list li a:hover{
+  color: #AB47BC;
+}
+.category-box .icon i{
+  background: #AB47BC;
+}
+.category-box .category-header h4:hover{
+  color: #AB47BC;
+}
+.category-box .category-content li a:hover{
+  color: #AB47BC;
+}
+.categories-list-ad .categories-list li a:hover{
+  color: #AB47BC;
+}
+.search-two .search-inner .search-suggestion .search-suggestion-items ul li a i{
+  background: #AB47BC;
+}
+.search-two .search-inner .search-suggestion .search-suggestion-items ul li a:hover{
+  color: #AB47BC;
+}
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before{
+  background-color: #AB47BC;
+}
+#categories .owl-theme .owl-nav div{
+    background: #AB47BC !important;
+}
+#categories .owl-theme .owl-nav div:hover{
+    background: #AB47BC !important;
+    border-color: #AB47BC !important;
+}
+#copyright{
+  background: #AB47BC;
+}
+.sidebar-box .user{
+  background: #AB47BC;
+}
+.owl-nav div:hover {
+  background: #BA68C8!important;;
+}
+.works-item .icon-box i{
+  color: #BA68C8;
+}
+.details-sidebar .agent-inner .agent-title .agent-photo img{
+  border-color: #BA68C8;
+}
+.ads-details-wrapper .owl-dots .active span{
+  background: #BA68C8 !important;
+}
+.featured-box .feature-content .meta-tag .review-avg{
+  background: #BA68C8;
+}
+.featured-box .feature-content .meta-tag .listing-category a{
+  color: #BA68C8;
+}
+.featured-box .listing-bottom a:hover{
+  color: #BA68C8;
+}

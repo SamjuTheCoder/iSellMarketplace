@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="_layout">
+<body>
+	<div layout:fragment="content">
+		
+
+<div class="page-header" style="background: url(assets/img/banner1.jpg);">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="breadcrumb-wrapper">
+<span th:each="menu: ${category}">
+<h2 class="product-title" th:if="${menu.id == name}" th:text="${'Listing for ' + menu.category}"></h2>
+</span>
+<ol class="breadcrumb">
+<li><a href="#">Home /</a></li>
+<li class="current">Listings</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="main-container section-padding">
+<div class="container">
+<div class="row">
+<div class="col-lg-3 col-md-12 col-xs-12 page-sidebar">
+<aside>
+
+<div class="widget_search">
+<form role="search" id="search-form">
+<input type="search" class="form-control" autocomplete="off" name="s" placeholder="Search..." id="search-input" value="">
+<button type="submit" id="search-submit" class="search-btn"><i class="lni-search"></i></button>
+</form>
+</div>
+
+<div class="widget categories">
+<h4 class="widget-title">All Categories</h4>
+<ul class="categories-list">
+<li th:each="menu: ${category}">
+<a th:href="'/more-details/' + ${menu.id} " th:text="${menu.category}">
+<i class="lni-dinner"></i>
+ <span class="category-counter">(5)</span>
+</a>
+</li>
+
+
+</ul>
+</div>
+<div class="widget">
+<h4 class="widget-title">Advertisement</h4>
+<div class="add-box">
+<img class="img-fluid" src="assets/img/img1.jpg" alt="">
+</div>
+</div>
+</aside>
+</div>
+<div class="col-lg-9 col-md-12 col-xs-12 page-content">
+
+<div class="product-filter">
+<div class="short-name">
+<span>Showing (1 - 12 products of 7371 products)</span>
+</div>
+<div class="Show-item">
+<span>Show Items</span>
+<form class="woocommerce-ordering" method="post">
+<label>
+<select name="order" class="orderby">
+<option selected="selected" value="menu-order">49 items</option>
+<option value="popularity">popularity</option>
+<option value="popularity">Average ration</option>
+<option value="popularity">newness</option>
+<option value="popularity">price</option>
+</select>
+</label>
+</form>
+</div>
+<ul class="nav nav-tabs">
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#grid-view"><i class="lni-grid"></i></a>
+</li>
+<li class="nav-item">
+<a class="nav-link active" data-toggle="tab" href="#list-view"><i class="lni-list"></i></a>
+</li>
+</ul>
+</div>
+
+
+<div class="adds-wrapper">
+
+<div id="list-view" class="tab-pane fade active show">
+<div class="row">
+
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" th:each="meal: ${details}">
+<div class="featured-box">
+<figure>
+<div class="homes-tag featured" th:text="${meal.description}"></div>
+<div class="homes-tag rent"><i class="lni-heart"></i> 202</div>
+<span class="price-save" th:text="${'&#x20A6;' + #numbers.formatDecimal(meal.price,1,'COMMA',0,'POINT')}">
+
+</span>
+<a th:href="'/product-details/' + ${meal.id}"><img class="img-fluid" th:src="@{/image/} + ${meal.picture}" alt=""  style="height:150px;width:250px;"></a>
+</figure>
+<div class="content-wrapper">
+<div class="feature-content" style="width:300px !important;">
+<h4><a th:href="'/product-details/' + ${meal.id}" th:text="${meal.description}"></a></h4>
+<div class="meta-tag">
+<div class="listing-review">
+<span class="review-avg">4.5</span>
+2 Ratings
+</div>
+<div class="user-name">
+<a href="#"  th:text="${meal.name}"><i class="lni-user"></i></a>
+</div>
+<div class="listing-category">
+<span th:each="menu : ${category}">
+<a th:if="${menu.id == meal.category}" href="#" th:text="${menu.category}" ><i class="lni-display"></i></a>
+</span>
+</div>
+</div>
+</div>
+<div class="listing-bottom clearfix">
+<span th:each="menu : ${location}">
+	<a href="#" class="float-left" th:if="${menu.id == meal.city}" th:text="${'City: ' + menu.city}"><i class="lni-map-marker"></i> </a>
+</span>
+
+ <a th:href="'/product-details/' + ${meal.id}" class="float-right">View Details</a>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+<!-- 
+<div class="pagination-bar">
+<nav>
+<ul class="pagination justify-content-center">
+<li class="page-item"><a class="page-link active" href="#">1</a></li>
+<li class="page-item"><a class="page-link" href="#">2</a></li>
+<li class="page-item"><a class="page-link" href="#">3</a></li>
+<li class="page-item"><a class="page-link" href="#">Next</a></li>
+</ul>
+</nav>
+</div>
+ -->
+</div>
+</div>
+</div>
+</div>
+	</div>
+</body>
+</html>

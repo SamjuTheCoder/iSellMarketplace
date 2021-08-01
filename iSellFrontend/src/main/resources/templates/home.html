@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="_layout">
+<body>
+	
+	<div layout:fragment="content">
+			
+			
+<div id="hero-area">
+<div class="overlay"></div>
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-md-12 col-lg-9 col-xs-12 text-center">
+<div class="contents">
+<h1 class="head-title">Welcome to The Largest <span class="year">Marketplace</span></h1>
+<p>Buy everything from foods to laundry, pharmacy, grocery, and more</p>
+<div class="search-bar">
+<div class="search-inner">
+<form class="search-form" th:method="get" th:action="@{/search}">
+<div class="form-group" style="margin-top:15px;">
+<span style="color:#000;">What are you looking for?</span>
+</div>
+<div class="form-group inputwithicon">
+<div class="select">
+
+<select th:name="category" th:id="category" required>
+<option value="">Select Catagory</option>
+<option th:each="menu : ${category}" th:value="${menu.id}"  th:text="${menu.category}"></option>
+                 
+</select>
+</div>
+<i class="lni-target"></i>
+</div>
+<div class="form-group inputwithicon">
+<div class="select">
+
+<select th:name="city" th:id="city" required>
+<option value="">Locations</option>
+<option th:each="menu : ${location}" th:value="${menu.id}"  th:text="${menu.city}"></option>        
+</select>
+</div>
+<i class="lni-menu"></i>
+</div>
+ <button class="btn btn-common" type="submit"><i class="lni-search"></i> Search Now</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</header>
+
+
+<section id="categories" class="section-padding">
+<div class="container">
+<div class="row">
+<div class="col-12 text-center">
+<div class="heading">
+<h1 class="section-title">Categories</h1>
+<h4 class="sub-title">Find the best services</h4>
+</div>
+</div>
+
+
+
+<div class="col-lg-3 col-md-3 col-xs-12" th:each="categories: ${category}">
+	<a th:href="'/more-details/' + ${categories.id} " target="_blank">
+	<div class="category-icon-item lis-bg1">
+	<div class="icon-box">
+	<div class="icon">
+	<i class="lni-display"></i>
+	</div>
+	<h4 th:text="${categories.category}"></h4>
+	<!-- <p class="categories-listing">1 Listing</p>-->
+	</div>
+	</div>
+	</a>
+	</div>
+	
+</div>
+</div>
+</section>
+
+
+<section class="featured section-padding">
+<div class="container">
+<div class="row">
+<div class="col-12 text-center">
+<div class="heading">
+<h1 class="section-title">Food Products</h1>
+</div>
+</div>
+
+<div class="col-xs-3 col-sm-3 col-md-3"  th:each="product: ${products}">
+<div class="featured-box">
+<figure>
+<div class="homes-tag featured">
+<span th:each="service: ${serviceprovider}">
+	<span th:if="${product.serviceProvider == service.id}" th:text="${'Provider: ' + service.name}">
+		                    	
+    </span>
+ </span>
+</div>
+
+<span class="price-save" th:text="${'&#x20A6;' + #numbers.formatDecimal(product.price,1,'COMMA',0,'POINT')}">
+
+</span>
+<a th:href="'/product-details/' + ${product.id} "><img class="img-fluid" th:src="@{/image/} + ${product.picture}" alt="" style="height:320px;width:350px;"></a>
+</figure>
+<div class="content-wrapper">
+<center>
+<div class="feature-content">
+<h4><a href="ads-details.html" th:text="${product.description}"></a></h4>
+<div class="meta-tag">
+<div class="listing-review">
+<span class="review-avg" th:text="${'Preparation Time: ' + product.preparationTime}"></span>
+
+</div>
+
+</div>
+</div>
+</center>
+
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+</section>
+
+
+<section class="featured-lis section-padding">
+<div class="container">
+<div class="row">
+<div class="col-12 text-center">
+<div class="heading">
+<h1 class="section-title">Service Providers</h1>
+</div>
+</div>
+<div class="col-md-12 wow fadeIn" data-wow-delay="0.5s">
+<div id="new-products" class="owl-carousel owl-theme">
+
+<div class="item" th:each="service: ${serviceprovider}">
+<div class="product-item">
+<div class="carousel-thumb">
+<img class="img-fluid" th:src="@{/image/} + ${service.logo}" alt="" style="height:220px;width:350px;">
+<div class="overlay">
+<div>
+<a class="btn btn-common" th:href="'/meal/' + ${service.name}">View Details</a>
+</div>
+</div>
+</div>
+<div class="product-content-inner">
+<div class="product-content">
+<h3 class="product-title"><a href="ads-details.html" th:text="${service.name}"></a></h3>
+<span th:each="categories: ${category}">
+	<span th:if="${service.category == categories.id}" th:text="${'Category: ' + categories.category}">
+		                    	
+    </span>
+ </span>
+
+<div class="icon">
+<span><i class="lni-bookmark"></i></span>
+<span><i class="lni-heart"></i></span>
+</div>
+</div>
+<div class="card-text clearfix">
+<div class="float-left">
+<span class="icon-wrap">
+<i class="lni-star-filled"></i>
+<i class="lni-star-filled"></i>
+<i class="lni-star-filled"></i>
+<i class="lni-star-filled"></i>
+<i class="lni-star-filled"></i>
+<i class="lni-star"></i>
+</span>
+<span class="count-review">
+(12 Review)
+</span>
+</div>
+<div class="float-right">
+<span th:each="locations: ${location}">
+
+    <a class="address" th:if="${service.city == locations.id}" th:text="${locations.city}"><i class="lni-map-marker"></i></a>
+ </span>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="works section-padding">
+<div class="container">
+<div class="row">
+<div class="col-12 text-center">
+<div class="heading">
+<h1 class="section-title">How It Works?</h1>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-xs-12">
+<div class="works-item">
+<div class="icon-box">
+<i class="lni-users"></i>
+</div>
+<p>Create an Account</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-xs-12">
+<div class="works-item">
+<div class="icon-box">
+<i class="lni-bookmark-alt"></i>
+</div>
+<p>Post Free Ad</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-xs-12">
+<div class="works-item">
+<div class="icon-box">
+<i class="lni-thumbs-up"></i>
+</div>
+<p>Deal Done</p>
+</div>
+</div>
+<hr class="works-line">
+</div>
+</div>
+</section>
+
+
+
+
+<section class="testimonial section-padding">
+<div class="container">
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<div id="testimonials" class="owl-carousel">
+<div class="item">
+<div class="img-thumb">
+<img src="assets/img/testimonial/img1.png" alt="">
+</div>
+<div class="testimonial-item">
+<div class="content">
+<p class="description">Awesome.</p>
+<div class="info-text">
+<h2><a href="#">John Francis</a></h2>
+<h4><a href="#">CEO of Chicken Republic</a></h4>
+</div>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="item">
+<div class="img-thumb">
+<img src="assets/img/testimonial/img2.png" alt="">
+</div>
+<div class="testimonial-item">
+<div class="content">
+<p class="description">Fantastic.</p>
+<div class="info-text">
+<h2><a href="#">Anita</a></h2>
+<h4><a href="#">CEO of Home Garden</a></h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="item">
+<div class="img-thumb">
+<img src="assets/img/testimonial/img3.png" alt="">
+</div>
+<div class="testimonial-item">
+<div class="content">
+<p class="description">Wonderful!</p>
+<div class="info-text">
+<h2><a href="#">Johnny Iwu</a></h2>
+<h4><a href="#">CEO of Dominos Pizza</a></h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="item">
+<div class="img-thumb">
+<img src="assets/img/testimonial/img4.png" alt="">
+</div>
+<div class="testimonial-item">
+<div class="content">
+<p class="description">Wonderful and awesome</p>
+<div class="info-text">
+<h2><a href="#">Emeka</a></h2>
+<h4><a href="#">CEO of Green Garden</a></h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="item">
+<div class="img-thumb">
+<img src="assets/img/testimonial/img5.png" alt="">
+</div>
+<div class="testimonial-item">
+<div class="content">
+<p class="description">Pleasant and Fantastically Okay</p>
+<div class="info-text">
+<h2><a href="#">Chris Ilo</a></h2>
+<h4><a href="#">CEO of Chrome Pizza</a></h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="blog" class="section-padding">
+
+<div class="container">
+<div class="row">
+<div class="col-12 text-center">
+<div class="heading">
+<h1 class="section-title">Blog Post</h1>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 col-xs-12 blog-item">
+
+<div class="blog-item-wrapper">
+<div class="blog-item-img">
+<a href="single-post.html">
+<img src="assets/img/blog/img-1.jpg" alt="">
+</a>
+</div>
+<div class="blog-item-text">
+<div class="meta-tags">
+<span class="user float-left"><a href="#"><i class="lni-user"></i> Posted By Admin</a></span>
+<span class="date float-right"><i class="lni-calendar"></i> 24 May, 2020</span>
+</div>
+<h3>
+<a href="#">Recently Launching Our Iphone X</a>
+</h3>
+<p>
+
+</p>
+<a href="#" class="btn btn-common">Read More</a>
+</div>
+</div>
+
+</div>
+<div class="col-lg-4 col-md-6 col-xs-12 blog-item">
+
+<div class="blog-item-wrapper">
+<div class="blog-item-img">
+<a href="single-post.html">
+<img src="assets/img/blog/img-2.jpg" alt="">
+</a>
+</div>
+<div class="blog-item-text">
+<div class="meta-tags">
+<span class="user float-left"><a href="#"><i class="lni-user"></i> Posted By Admin</a></span>
+<span class="date float-right"><i class="lni-calendar"></i> 24 May, 2020</span>
+</div>
+<h3>
+<a href="#">How to get more ad views</a>
+</h3>
+<p>
+
+</p>
+<a href="#" class="btn btn-common">Read More</a>
+</div>
+</div>
+
+</div>
+<div class="col-lg-4 col-md-6 col-xs-12 blog-item">
+
+<div class="blog-item-wrapper">
+<div class="blog-item-img">
+<a href="single-post.html">
+<img src="assets/img/blog/img-3.jpg" alt="">
+</a>
+</div>
+<div class="blog-item-text">
+<div class="meta-tags">
+<span class="user float-left"><a href="#"><i class="lni-user"></i> Posted By Admin</a></span>
+<span class="date float-right"><i class="lni-calendar"></i> 24 May, 2020</span>
+</div>
+<h3>
+<a href="#">Writing a better product description</a>
+</h3>
+<p>
+
+</p>
+<a href="#" class="btn btn-common">Read More</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="subscribes section-padding">
+<div class="container">
+<div class="row">
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+<div class="subscribes-inner">
+<div class="icon">
+<i class="lni-pointer"></i>
+</div>
+<div class="sub-text">
+<h3>Subscribe to Newsletter</h3>
+<p>and receive new ads in inbox</p>
+</div>
+</div>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+<form>
+<div class="subscribe">
+<input class="form-control" name="EMAIL" placeholder="Enter your Email" required="" type="email">
+<button class="btn btn-common" type="submit">Subscribe</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+	 </div>
+</body>
+</html>

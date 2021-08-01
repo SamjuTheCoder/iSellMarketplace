@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="_layout">
+<body>
+	<div layout:fragment="content">
+			<div class="page-header" style="background: url(assets/img/banner1.jpg);">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="breadcrumb-wrapper">
+<h2 class="product-title">Place Order</h2>
+<ol class="breadcrumb">
+<li><a href="#">Home /</a></li>
+<li class="current">Place Order</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="section-padding">
+<div class="container">
+
+<div class="product-info row">
+<div class="col-lg-8 col-md-12 col-xs-12">
+<div class="ads-details-wrapper">
+
+</div>
+<div class="details-box">
+<div class="row">
+<div class="ads-details-info col-md-6">
+Meal: <h2 class="text-info" th:text="${details.description}"></h2>
+
+Price: <p class="mb-4 text-success text-bold" style="font-size:16px" th:text="${'&#x20A6;' + #numbers.formatDecimal(details.price,1,'COMMA',0,'POINT')}">
+	
+</p>
+<input type=hidden th:name="amount" th:id="amount" th:value="${#numbers.formatDecimal(details.price,1,'NONE',0,'POINT')}">
+Preparation Time: <p class="mb-4 text-bold text-primary" style="font-size:16px" th:text="${details.preparationTime}">
+	
+</p>
+Service Provider: <h5 th:text="${details.name}"></h5>
+
+</div>
+<div class="ads-details-info col-md-6">
+ <h2 class="text-info">Ordering Form</h2>
+
+Fullname: <input type=text class="form-control" th:name="fullname" th:id="fullname" value="" required>
+Phone: <input type=number class="form-control" th:name="phone" th:id="phone" value="" required>
+
+Email: <input type=email class="form-control" th:name="email" th:id="email" value="" required>
+Delivery Address: <input type=text class="form-control" th:name="address" th:id="address" value="" required>
+<br>
+<button class="btn btn-common forn-control" onclick="payWithPaystack()" style="cursor:pointer"><i class="lni-folder"></i> Pay</button> 
+</div>
+</div>
+<div class="tag-bottom">
+<div class="float-left">
+<ul class="advertisement">
+<li>
+<p>
+<span>
+<a href="#"></a>
+</span>
+</p>
+
+</li>
+</ul>
+</div>
+<div class="float-right">
+<div class="share">
+<div class="social-link">
+<a class="facebook" data-toggle="tooltip" data-placement="top" title="facebook" href="#"><i class="lni-facebook-filled"></i></a>
+<a class="twitter" data-toggle="tooltip" data-placement="top" title="twitter" href="#"><i class="lni-twitter-filled"></i></a>
+<a class="linkedin" data-toggle="tooltip" data-placement="top" title="linkedin" href="#"><i class="lni-linkedin-fill"></i></a>
+<a class="google" data-toggle="tooltip" data-placement="top" title="google plus" href="#"><i class="lni-google-plus"></i></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 col-xs-12">
+
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+<section class="subscribes section-padding">
+<div class="container">
+<div class="row">
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+<div class="subscribes-inner">
+<div class="icon">
+<i class="lni-pointer"></i>
+</div>
+<div class="sub-text">
+<h3>Subscribe to Newsletter</h3>
+<p>and receive new ads in inbox</p>
+</div>
+</div>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+<form>
+<div class="subscribe">
+<input class="form-control" name="EMAIL" placeholder="Enter your Email" required="" type="email">
+<button class="btn btn-common" type="submit">Subscribe</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+	</div>
+</body>
+</html>
