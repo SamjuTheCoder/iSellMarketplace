@@ -12,7 +12,7 @@
 	}
 	else{
 	    var handler     = PaystackPop.setup({
-	      key: 'pk_test_9fffdfb13c6194a5a236b933ddb00aa29a78dd78',
+	      key: 'pk_test_9fffdfb13c6194a5a236b933ddb00aa33333sdfsfsd78',
 	      email: email,
 	      amount: amount +'00',
 	      //channels: ['card'],
